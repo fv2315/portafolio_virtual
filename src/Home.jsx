@@ -1,15 +1,16 @@
 import { Link } from 'react-router-dom';
+import miFoto from './assets/mi_foto.png'; // 1. Aquí se importa tu foto
 
 export default function Home() {
   return (
     <main className="max-w-5xl mx-auto px-4 py-16 flex flex-col items-center text-center">
       
-      {/* Contenedor de la foto con borde degradado */}
+      {/* 2. Aquí se muestra tu foto */}
       <div className="bg-gradient-to-r from-blue-500 to-indigo-600 p-1.5 rounded-full shadow-2xl mb-6">
         <img 
-          src="https://ui-avatars.com/api/?name=Favio+Castillo&background=ffffff&color=2563eb&size=150" 
+          src={miFoto} 
           alt="Foto de Favio" 
-          className="rounded-full border-4 border-white" 
+          className="rounded-full border-4 border-white w-[160px] h-[160px] object-cover" 
         />
       </div>
       
@@ -36,7 +37,6 @@ export default function Home() {
 
       {/* Tarjeta de Presentación Elegante */}
       <div id="presentacion" className="max-w-3xl w-full bg-white p-10 rounded-2xl shadow-xl border border-gray-100 text-left relative overflow-hidden">
-        {/* Detalle visual en el borde izquierdo */}
         <div className="absolute top-0 left-0 w-2 h-full bg-gradient-to-b from-blue-500 to-indigo-600"></div>
         
         <h2 className="text-2xl font-bold mb-4 text-gray-800 flex items-center gap-2">
