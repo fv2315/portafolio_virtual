@@ -1,87 +1,19 @@
+const semanas = [
+  { semana: '01', titulo: 'Fundamentos de las tecnologías web', temas: 'Diferencias entre sitio web, página web y aplicación web. Funcionamiento general de DNS, TCP/IP y HTTP; roles frontend, backend y full stack.', practica: 'Exploración de Visual Studio Code, extensiones y configuración del entorno.', aprendizaje: 'Comprendí los conceptos iniciales del ecosistema web y preparé mis herramientas de trabajo.' },
+  { semana: '02', titulo: 'HTML semántico y CSS', temas: 'Estructura de documentos HTML, DOM, etiquetas semánticas y estilos CSS. Introducción a Flexbox, Grid y diseño adaptable.', practica: 'Maquetación de una interfaz y organización de sus elementos con técnicas de layout.', aprendizaje: 'Aprendí a estructurar el contenido y distribuirlo para diferentes tamaños de pantalla.' },
+  { semana: '03', titulo: 'Frameworks CSS modernos', temas: 'Utilidades de Tailwind CSS, sistema de grillas de Bootstrap, tipografía, espaciados y componentes UI.', practica: 'Construcción de una página con componentes visuales y distribución responsiva.', aprendizaje: 'Identifiqué cómo los frameworks agilizan el diseño y ayudan a mantener consistencia visual.' },
+  { semana: '04', titulo: 'JavaScript y manipulación del DOM', temas: 'Variables, operadores, funciones, estructuras de control, eventos y actualización de elementos de una página.', practica: 'Implementación de interacciones sencillas con JavaScript.', aprendizaje: 'Relacioné los eventos del usuario con cambios dinámicos en la interfaz.' },
+  { semana: '05', titulo: 'React y componentes', temas: 'Componentes funcionales, JSX, props, composición y reutilización de elementos de interfaz.', practica: 'Separación de una interfaz en componentes reutilizables.', aprendizaje: 'Comprendí la importancia de organizar el frontend en piezas pequeñas y mantenibles.' },
+  { semana: '06', titulo: 'Eventos, rutas y consumo de APIs', temas: 'Renderizado condicional e iterativo, formularios, promesas, async/await y peticiones HTTP.', practica: 'Práctica de consumo de servicios web y representación de resultados en pantalla.', aprendizaje: 'Aprendí el flujo básico de una petición asíncrona y la presentación de sus datos.' },
+  { semana: '07', titulo: 'Estado y Hooks en React', temas: 'Uso de useState y useEffect para manejar datos y sincronizar componentes con efectos.', practica: 'Ejercicios de estado local y actualización reactiva de la interfaz.', aprendizaje: 'Reconocí cómo el estado permite que los componentes respondan a las acciones del usuario.' },
+];
+
 export default function Cuaderno() {
-  const semanas = [
-    {
-      titulo: "Semana 1",
-      temas: "Fundamentos de las tecnologías web. Comprendí las diferencias entre sistema web, aplicación, sitio web y página web. Se exploró el funcionamiento de DNS, protocolos TCP/IP y HTTP, y definimos los roles de desarrollador frontend, backend y fullstack.",
-      lab: "Laboratorio 01A. Exploración de Visual Studio Code, reconociendo elementos de la interfaz, instalación de extensiones y uso de atajos de teclado.",
-      reflexion: "¿Qué aprendí? Las bases teóricas de la web y a preparar mi entorno. ¿Cómo aprendí? Mediante la exposición y la configuración manual de mi editor."
-    },
-    {
-      titulo: "Semana 2",
-      temas: "Construcción de páginas con HTML5 y XML. Entendí el Árbol DOM, SEO y compatibilidad entre navegadores. Diseño web con CSS3 empleando Flexbox, Grid Layout, y diseño fluido/responsivo.",
-      lab: "Laboratorio 02A. Creación de un diseño flexbox, fluido y responsivo.",
-      reflexion: "¿Qué aprendí? A maquetar el esqueleto web y aplicar estilos modernos. ¿Cómo aprendí? Estructurando HTML y aplicando propiedades CSS."
-    },
-    {
-      titulo: "Semana 3",
-      temas: "Desarrollo frontend con librerías CSS (Bootstrap y Tailwind). Tipografía, espaciado, utilidades flexbox, y elementos UI como Avatars y Buttons.",
-      lab: "Práctica Calificada 03. Desarrollo de un sitio web implementando frameworks CSS.",
-      reflexion: "¿Qué aprendí? A maquetar rápidamente interfaces atractivas usando clases utilitarias. ¿Cómo aprendí? Aplicando las clases directamente en el HTML."
-    },
-    {
-      titulo: "Semana 4",
-      temas: "JavaScript y Typescript (variables, bucles, funciones flecha y closures). Manejo del DOM mediante JS y creación de animaciones con Canvas.",
-      lab: "Laboratorio 04. Desarrollo de una animación interactiva utilizando JavaScript nativo y Canvas.",
-      reflexion: "¿Qué aprendí? A dotar de lógica matemática e interactividad a la página web. ¿Cómo aprendí? Escribiendo scripts para modificar el DOM."
-    },
-    {
-      titulo: "Semana 5",
-      temas: "Client Side Rendering, arquitectura basada en componentes (JSX, PROPS, CHILDREN) y cómo aplicar estilos dentro de un framework.",
-      lab: "Laboratorio 05A. Paso de datos utilizando props y children en componentes hijos.",
-      reflexion: "¿Qué aprendí? A pensar en componentes modulares y reutilizables. ¿Cómo aprendí? Creando funciones que retornan JSX y transfiriendo propiedades."
-    },
-    {
-      titulo: "Semana 6",
-      temas: "Manejo de eventos, renderizado condicional, formularios y routing. Consumo de APIs utilizando Promesas, Async/Await y Axios.",
-      lab: "Laboratorio 06A. Implementación de eventos y renderizado iterativo sobre datos de una API externa.",
-      reflexion: "¿Qué aprendí? A conectar la app con backend (APIs) para mostrar datos dinámicos. ¿Cómo aprendí? Haciendo peticiones HTTP con Axios."
-    },
-    {
-      titulo: "Semana 7",
-      temas: "Uso de Hooks (UseState, UseEffect, UseContext, UseReducer, etc.) y creación de Hooks personalizados.",
-      lab: "Laboratorio 06 (Uso de Hooks). Gestión avanzada del estado y ciclo de vida de los componentes funcionales.",
-      reflexion: "¿Qué aprendí? A controlar estados complejos y optimizar el rendimiento. ¿Cómo aprendí? Resolviendo problemas de reactividad."
-    },
-    {
-      titulo: "Semana 8",
-      temas: "Revisión de la evaluación de logro, retroalimentación del docente, y desarrollo del primer consolidado.",
-      lab: "Consolidación de todos los temas previos abordados.",
-      reflexion: "¿Qué aprendí? A identificar áreas de mejora mediante el feedback. ¿Cómo aprendí? Revisando errores y consultando mejores prácticas."
-    }
-  ];
-
-  return (
-    <main className="max-w-4xl mx-auto px-4 py-16">
-      <h1 className="text-3xl font-bold mb-8 text-blue-700 uppercase">Cuaderno de Aprendizaje</h1>
-      
-      <div className="space-y-8 mb-16">
-        {semanas.map((semana, index) => (
-          <div key={index} className="bg-white p-6 rounded-lg shadow-sm border-l-4 border-blue-600">
-            <h2 className="text-xl font-bold mb-4 text-blue-800">{semana.titulo}</h2>
-            <ul className="list-disc pl-5 mb-4 text-gray-700 space-y-2">
-              <li><strong>Temas aprendidos:</strong> {semana.temas}</li>
-              <li><strong>Ejercicios de laboratorio:</strong> {semana.lab}</li>
-            </ul>
-            <div className="bg-gray-100 p-4 rounded text-sm text-gray-800">
-              <strong>Reflexión:</strong> <br/>
-              <em>{semana.reflexion}</em>
-            </div>
-          </div>
-        ))}
-      </div>
-
-      <h2 className="text-2xl font-bold mb-4 text-blue-700 border-b pb-2">Reflexión Final</h2>
-      <div className="bg-white p-6 rounded-lg shadow-sm mb-12 border border-gray-200">
-        <p className="text-gray-700 mb-4"><strong>¿Qué aprendí?</strong><br/> He logrado comprender el ecosistema Frontend para Single Page Applications (SPA). Partiendo de maquetación HTML/CSS, evolucionando a frameworks CSS y finalmente implementando lógicas complejas con Frameworks JS y Hooks.</p>
-        <p className="text-gray-700"><strong>¿Cómo aprendí?</strong><br/> A través del aprendizaje basado en problemas y laboratorios prácticos en Visual Studio Code, escribiendo código real e investigando.</p>
-      </div>
-
-      <h2 className="text-2xl font-bold mb-4 text-blue-700 border-b pb-2">Bibliografía</h2>
-      <ul className="list-disc pl-5 text-gray-700">
-        <li>(1), (2), (4), (5), (6), (9), (10), (11-17) - Según la bibliografía del sílabo.</li>
-        <li>React Docs. Documentación de React.js y Hooks.</li>
-        <li>Documentación Web de Mozilla (MDN).</li>
-      </ul>
-    </main>
-  );
+  return <main className="section-wrap journal-page">
+    <header className="journal-hero panel"><span className="eyebrow">Registro de aprendizaje</span><h1>Bitácora <span className="gradient-text">de desarrollo.</span></h1><p>Un registro de temas, prácticas y aprendizajes de mi formación en desarrollo web. Las entradas sirven como resumen personal y se pueden ampliar conforme avance el curso.</p><div className="journal-stats"><div><strong>{String(semanas.length).padStart(2, '0')}</strong><span>semanas registradas</span></div><div><strong>01</strong><span>proceso continuo</span></div><div><strong>UNCP</strong><span>formación académica</span></div></div></header>
+    <section className="journal-section"><div className="section-heading"><span className="eyebrow">Notas semanales</span><h2>Del concepto a la práctica.</h2></div><div className="journal-list">{semanas.map((item) => <article className="journal-entry" key={item.semana}><div className="week-marker"><span>SEM.</span><strong>{item.semana}</strong></div><div className="entry-body"><div className="entry-heading"><h3>{item.titulo}</h3><span className="tag">Apunte {item.semana}</span></div><div className="entry-columns"><div><span className="entry-label">Temas principales</span><p>{item.temas}</p></div><div><span className="entry-label">Práctica</span><p>{item.practica}</p></div></div><div className="reflection"><span>↳ Reflexión</span><p>{item.aprendizaje}</p></div></div></article>)}</div></section>
+    <section className="closing-reflection panel"><span className="eyebrow">Mirada personal</span><h2>Aprender es construir paso a paso.</h2><p>Este recorrido me permite relacionar los conceptos de la web con ejercicios prácticos. Cada tema aporta una pieza: la estructura organiza el contenido, los estilos mejoran su presentación y JavaScript junto con React agrega comportamiento. Mi siguiente paso es seguir practicando, documentar mejor mis proyectos y aplicar buenas prácticas de accesibilidad y organización del código.</p></section>
+    <section className="references"><h2>Documentación de consulta</h2><p>Recursos técnicos útiles para contrastar conceptos y continuar practicando:</p><ul><li><a href="https://developer.mozilla.org/es/" target="_blank" rel="noopener noreferrer">MDN Web Docs</a> — documentación de HTML, CSS y JavaScript.</li><li><a href="https://react.dev/" target="_blank" rel="noopener noreferrer">React</a> — documentación oficial de componentes y Hooks.</li><li><a href="https://tailwindcss.com/docs" target="_blank" rel="noopener noreferrer">Tailwind CSS</a> — guía oficial de utilidades y estilos.</li><li><a href="https://getbootstrap.com/docs/5.3/" target="_blank" rel="noopener noreferrer">Bootstrap 5.3</a> — documentación de componentes y sistema de grillas.</li></ul></section>
+    <style>{`.journal-hero{padding:clamp(26px,5vw,54px);background:radial-gradient(ellipse at 95% 0%,rgba(104,224,208,.1),transparent 40%),linear-gradient(140deg,rgba(20,31,49,.96),rgba(12,19,32,.9))}.journal-hero h1{font-size:clamp(2.4rem,6vw,4.2rem);letter-spacing:-.065em;line-height:1.08;margin:18px 0}.journal-hero>p{max-width:690px;color:var(--muted);line-height:1.85}.journal-stats{display:flex;gap:45px;flex-wrap:wrap;margin-top:34px;padding-top:25px;border-top:1px solid var(--line)}.journal-stats div{display:flex;flex-direction:column;gap:4px}.journal-stats strong{font-size:1.25rem;letter-spacing:-.04em;color:var(--accent)}.journal-stats span{font-size:.72rem;color:var(--muted)}.journal-section{margin-top:68px}.journal-list{display:flex;flex-direction:column;gap:14px}.journal-entry{display:grid;grid-template-columns:76px 1fr;gap:20px;padding:24px;border:1px solid var(--line);border-radius:18px;background:rgba(16,24,39,.68)}.week-marker{display:flex;flex-direction:column;align-items:center;justify-content:center;align-self:start;border:1px solid rgba(104,224,208,.25);background:rgba(104,224,208,.06);border-radius:13px;padding:12px 8px;color:var(--accent)}.week-marker span{font-size:.59rem;letter-spacing:.12em}.week-marker strong{font-size:1.75rem;letter-spacing:-.07em}.entry-heading{display:flex;align-items:center;justify-content:space-between;gap:12px}.entry-heading h3{font-size:1.12rem;letter-spacing:-.025em;margin:0}.entry-columns{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin-top:18px}.entry-label{font-size:.69rem;color:var(--accent);text-transform:uppercase;letter-spacing:.08em;font-weight:800}.entry-columns p,.reflection p{font-size:.84rem;color:var(--muted);line-height:1.75;margin:7px 0 0}.reflection{margin-top:17px;padding:13px 15px;border-left:2px solid var(--accent);background:rgba(104,224,208,.045);border-radius:0 9px 9px 0}.reflection>span{font-size:.72rem;font-weight:800;color:#c5d4e7}.reflection p{margin-top:4px}.closing-reflection{padding:clamp(24px,4vw,38px);margin-top:55px}.closing-reflection h2{font-size:clamp(1.5rem,3vw,2rem);letter-spacing:-.04em;margin:14px 0}.closing-reflection p,.references p,.references li{color:var(--muted);font-size:.88rem;line-height:1.85}.references{margin-top:48px}.references h2{font-size:1.15rem}.references ul{padding-left:20px}.references a{color:var(--accent);text-decoration:underline;text-underline-offset:3px}.references a:hover{color:#b1fff4}@media(max-width:650px){.journal-entry{grid-template-columns:48px 1fr;gap:13px;padding:15px}.week-marker{padding:10px 4px}.week-marker strong{font-size:1.4rem}.entry-heading{align-items:flex-start;flex-direction:column}.entry-columns{grid-template-columns:1fr;gap:12px}.journal-stats{gap:22px}}`}</style>
+  </main>;
 }

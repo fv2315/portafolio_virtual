@@ -1,28 +1,15 @@
+const proyectos = [
+  { numero: '01', titulo: 'Eventos y consumo de APIs', categoria: 'JavaScript', descripcion: 'Práctica de eventos, renderizado condicional e iterativo y consumo asíncrono de servicios web.', tecnologias: ['JavaScript', 'Promises', 'Axios'], repositorio: 'https://github.com/fv2315/SEMANA06---Framework-JS-Eventos' },
+  { numero: '02', titulo: 'Frameworks CSS modernos', categoria: 'Frontend', descripcion: 'Ejercicios de maquetación con frameworks CSS, componentes de interfaz y layouts responsivos.', tecnologias: ['CSS', 'Bootstrap', 'Tailwind CSS'], repositorio: 'https://github.com/fv2315/SEMANA-05---' },
+  { numero: '03', titulo: 'Portafolio web', categoria: 'Diseño web', descripcion: 'Proyecto inicial para organizar información personal y presentar trabajos académicos en una web.', tecnologias: ['HTML', 'CSS', 'Diseño responsivo'], repositorio: 'https://github.com/fv2315/portafolio_virtual' },
+];
+
 export default function Proyectos() {
-  return (
-    <main className="max-w-5xl mx-auto px-4 py-16">
-      <h1 className="text-3xl font-bold mb-8 text-blue-700">Proyectos Concluidos</h1>
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-        
-        <div className="bg-white p-6 rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition">
-          <h3 className="font-bold text-xl text-gray-800 mb-2">Diseño Web Responsivo</h3>
-          <p className="text-gray-600 mb-4">Página web estructurada con HTML5 y estilizada con CSS3 usando Flexbox y Grid Layout.</p>
-          <span className="text-xs bg-blue-100 text-blue-800 px-2 py-1 rounded">HTML/CSS</span>
-        </div>
-
-        <div className="bg-white p-6 rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition">
-          <h3 className="font-bold text-xl text-gray-800 mb-2">Animación con Canvas</h3>
-          <p className="text-gray-600 mb-4">Desarrollo de una animación interactiva utilizando el DOM, JavaScript Vanilla y elementos Canvas.</p>
-          <span className="text-xs bg-yellow-100 text-yellow-800 px-2 py-1 rounded">JavaScript</span>
-        </div>
-
-        <div className="bg-white p-6 rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition">
-          <h3 className="font-bold text-xl text-gray-800 mb-2">App SPA con Framework JS</h3>
-          <p className="text-gray-600 mb-4">Aplicación desarrollada basada en componentes (JSX), utilizando Hooks y consumo de APIs con Axios.</p>
-          <span className="text-xs bg-indigo-100 text-indigo-800 px-2 py-1 rounded">React JS</span>
-        </div>
-
-      </div>
-    </main>
-  );
+  return <main className="section-wrap projects-page">
+    <header className="section-heading projects-intro"><span className="eyebrow">Trabajo en progreso</span><h1>Proyectos que convierten<br /><span className="gradient-text">práctica en experiencia.</span></h1><p>Una selección de ejercicios y proyectos académicos. Cada repositorio permite revisar el código fuente y conocer mejor el proceso de desarrollo.</p></header>
+    <div className="project-toolbar"><span>{String(proyectos.length).padStart(2, '0')} <span className="toolbar-muted">proyectos destacados</span></span><span className="toolbar-muted">Desarrollo web · UNCP</span></div>
+    <div className="project-list">{proyectos.map((proyecto) => <article className="project-card" key={proyecto.numero}><div className="project-number">{proyecto.numero}</div><div className="project-main"><div className="project-topline"><span className="eyebrow">{proyecto.categoria}</span><span className="project-status"><i></i> Proyecto académico</span></div><h2>{proyecto.titulo}</h2><p>{proyecto.descripcion}</p><div className="tag-list">{proyecto.tecnologias.map((tech) => <span className="tag" key={tech}>{tech}</span>)}</div></div><a className="project-link" href={proyecto.repositorio} target="_blank" rel="noopener noreferrer" aria-label={`Abrir repositorio de ${proyecto.titulo}`}>↗</a></article>)}</div>
+    <div className="projects-note"><span className="icon-box">⌘</span><div><h3>El código también cuenta la historia.</h3><p>Los repositorios se abren en GitHub. El contenido y la disponibilidad dependen de cada proyecto.</p></div><a href="https://github.com/fv2315" target="_blank" rel="noopener noreferrer" className="text-link">Ver perfil completo ↗</a></div>
+    <style>{`.projects-intro{max-width:800px}.project-toolbar{display:flex;justify-content:space-between;gap:15px;border-bottom:1px solid var(--line);padding:14px 2px;color:var(--accent);font-size:.8rem;font-weight:750}.toolbar-muted{color:var(--muted);font-weight:450}.project-list{display:flex;flex-direction:column;gap:14px;margin-top:20px}.project-card{display:grid;grid-template-columns:58px 1fr 48px;align-items:start;gap:22px;padding:26px;border:1px solid var(--line);border-radius:19px;background:linear-gradient(120deg,rgba(18,28,45,.9),rgba(12,19,32,.72));transition:border-color .2s,transform .2s}.project-card:hover{border-color:rgba(104,224,208,.38);transform:translateY(-2px)}.project-number{font-size:1.45rem;font-weight:800;letter-spacing:-.06em;color:#64738d}.project-topline{display:flex;align-items:center;justify-content:space-between;gap:15px}.project-topline .eyebrow{font-size:.67rem}.project-status{font-size:.68rem;color:var(--muted)}.project-status i{display:inline-block;width:6px;height:6px;border-radius:50%;background:var(--accent);margin-right:6px}.project-main h2{font-size:clamp(1.2rem,2.5vw,1.7rem);letter-spacing:-.04em;margin:13px 0 8px}.project-main>p{max-width:650px;color:var(--muted);line-height:1.75;font-size:.9rem;margin:0 0 18px}.project-link{display:grid;place-items:center;width:44px;height:44px;border-radius:13px;border:1px solid var(--line);color:var(--accent);font-size:1.3rem;transition:background .2s}.project-link:hover{background:rgba(104,224,208,.1)}.projects-note{display:flex;align-items:center;gap:17px;padding:23px 0;margin-top:30px;border-top:1px solid var(--line)}.projects-note h3{margin:0 0 5px;font-size:.95rem}.projects-note p{margin:0;color:var(--muted);font-size:.8rem;line-height:1.6}.projects-note .text-link{margin-left:auto;white-space:nowrap}@media(max-width:650px){.project-card{grid-template-columns:35px 1fr;gap:12px;padding:20px}.project-link{grid-column:2;grid-row:2}.project-topline{align-items:flex-start;flex-direction:column;gap:7px}.project-toolbar{font-size:.72rem}.projects-note{align-items:flex-start;flex-wrap:wrap}.projects-note .text-link{margin-left:58px}}`}</style>
+  </main>;
 }

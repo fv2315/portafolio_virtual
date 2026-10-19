@@ -1,18 +1,17 @@
+const skills = [
+  { name: 'Frontend', items: ['HTML5 y CSS3', 'JavaScript', 'React', 'Tailwind CSS'] },
+  { name: 'Herramientas', items: ['Git y GitHub', 'Visual Studio Code', 'Vite', 'Terminal Linux'] },
+  { name: 'Áreas de interés', items: ['Diseño responsivo', 'Experiencia de usuario', 'Ciberseguridad', 'Arquitectura de sistemas'] },
+];
+
 export default function SobreMi() {
-  return (
-    <main className="max-w-4xl mx-auto px-4 py-16">
-      <h1 className="text-3xl font-bold mb-8 text-blue-700">Información Sobre mí</h1>
-      <div className="bg-white p-8 rounded-xl shadow-sm border border-gray-100">
-        <p className="text-gray-700 mb-4 text-lg">
-          Soy un desarrollador en formación con un enfoque principal en tecnologías Frontend y despliegue de Single Page Applications (SPA).
-        </p>
-        <p className="text-gray-700 mb-4">
-          A lo largo de mi carrera en la UNCP, he complementado mis estudios universitarios con herramientas prácticas de la industria, como el uso de Visual Studio Code, control de versiones (Git/GitHub) y metodologías de aprendizaje basado en problemas.
-        </p>
-        <p className="text-gray-700">
-          Mi objetivo con este portafolio digital es documentar mi aprendizaje continuo en tecnologías web (HTML5, CSS3, JavaScript y Frameworks JS), incorporando componentes de React conforme avanzo en mis conocimientos.
-        </p>
-      </div>
-    </main>
-  );
+  return <main className="section-wrap about-page">
+    <header className="section-heading"><span className="eyebrow">Un poco sobre mí</span><h1>Aprender, construir<br /><span className="gradient-text">y mejorar.</span></h1><p>Mi perfil combina la formación universitaria en Ingeniería de Sistemas con la práctica de herramientas y tecnologías para desarrollar soluciones digitales.</p></header>
+    <div className="about-grid">
+      <section className="panel about-story"><span className="eyebrow">Mi historia</span><h2>La tecnología como herramienta para resolver problemas.</h2><p>Actualmente estudio Ingeniería de Sistemas en la Universidad Nacional del Centro del Perú (UNCP). Durante mi formación, desarrollo ejercicios y proyectos que me ayudan a comprender cómo diseñar, construir y mejorar aplicaciones.</p><p>Me interesa especialmente el desarrollo frontend: transformar una idea en una interfaz clara, ordenada y adaptable a distintos dispositivos. También busco ampliar mis conocimientos sobre bases de datos, redes y seguridad informática.</p><p>Considero que programar implica practicar, investigar, equivocarse y aprender de cada solución. Por eso, este portafolio reúne parte de mi trabajo académico y mi progreso.</p></section>
+      <aside className="about-aside"><div className="info-card objective-card"><div className="icon-box">◎</div><h3>Mi objetivo</h3><p>Fortalecer mis habilidades técnicas mediante proyectos prácticos y avanzar hacia el desarrollo de sistemas útiles, seguros y mantenibles.</p></div><div className="info-card"><div className="icon-box">✦</div><h3>Mi forma de aprender</h3><p>Practicar con ejemplos, consultar documentación, dividir los problemas en pasos y revisar el resultado antes de darlo por terminado.</p></div></aside>
+    </div>
+    <section className="skills-section"><div className="section-heading"><span className="eyebrow">Mi caja de herramientas</span><h2>Tecnologías que estoy trabajando</h2><p>Una lista de tecnologías y áreas de interés que forman parte de mi aprendizaje actual; no representa certificaciones oficiales.</p></div><div className="skill-grid">{skills.map((group) => <article className="info-card skill-card" key={group.name}><h3>{group.name}</h3><div className="tag-list">{group.items.map((item) => <span className="tag" key={item}>{item}</span>)}</div></article>)}</div></section>
+    <style>{`.about-page .section-heading{max-width:760px;margin-bottom:45px}.about-grid{display:grid;grid-template-columns:1.45fr .8fr;gap:20px}.about-story{padding:clamp(24px,4vw,42px)}.about-story h2{font-size:clamp(1.6rem,3vw,2.25rem);line-height:1.2;letter-spacing:-.045em;margin:18px 0 24px}.about-story p{font-size:.96rem;line-height:1.9;color:var(--muted)}.about-aside{display:flex;flex-direction:column;gap:18px}.objective-card{background:linear-gradient(145deg,rgba(24,43,57,.9),rgba(17,26,42,.8))}.skills-section{margin-top:76px}.skill-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.skill-card h3{margin:0 0 17px}.tag-list{display:flex;flex-wrap:wrap;gap:8px}@media(max-width:760px){.about-grid,.skill-grid{grid-template-columns:1fr}.about-story{padding:25px}.skills-section{margin-top:55px}}`}</style>
+  </main>;
 }
